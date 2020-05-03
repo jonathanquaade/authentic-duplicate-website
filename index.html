@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Authentic Duplicate 3D</title>
+		<style>
+            @font-face {
+                  font-family: 'Berthold-Akzidenz-Grotesk';
+                  src: url("assets/fonts/Berthold-Akzidenz-Grotesk-Light.woff");
+            }
+			body {
+                overflow: hidden;
+                margin: 0;
+            }
+			canvas { display: block; }
+            .dg.ac {z-index: 10;}
+            p {
+                font-family: 'Berthold-Akzidenz-Grotesk', serif;
+                /* font-weight: 100; */
+                color: #E4D3C2;
+                font-size: 22px;
+                letter-spacing: -0.025em;
+                margin: 12px 0 11px 0;
+            }
+            .aud-buttons {
+                margin: 0 48px;
+                width: calc(100% - 96px);
+                height: 100%;
+                z-index: 100;
+                position: fixed;
+                top: 0px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .aud-button {
+                border: 1px solid #E4D3C2;
+                border-radius: 30px;
+                width: 200px;
+                text-align: center;
+                transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+            }
+
+            .aud-button:hover {
+                border: 1px solid #E4D3C2;
+                background: #E4D3C2;
+                text-align: center;
+                cursor: pointer;
+            }
+            
+            .aud-button:hover p {
+                color: #454734;
+            }
+
+            #aud-one, #aud-three { transform: translateY(-96px); }
+            #aud-two { transform: translateY(96px); }
+
+            video {
+    position: fixed;
+    min-width: 104%;
+    min-height: 104%;
+    transform: translateX(calc(((100% - 100vw) / 2) * -1 ));
+            }
+
+		</style>
+	</head>
+	<body>
+        <div id="master-video"></div>
+        <!-- <div class="buttons">
+            <div id="one" class="button">
+                <p>Consultancy</p>
+            </div>
+            <div id="two" class="button">
+                <p>Journalism</p>
+            </div>
+            <div id="three" class="button">
+                <p>Music</p>
+            </div>
+       </div> -->
+		
+        <script src="https://rawgit.com/mrdoob/three.js/master/build/three.js"></script>
+        <script src="https://rawgit.com/mrdoob/three.js/master/examples/js/lights/RectAreaLightUniformsLib.js"></script>
+        <script src="https://rawgit.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js"></script>
+        <script src="https://rawgit.com/mrdoob/three.js/master/examples/js/libs/dat.gui.min.js"></script>
+        <script src="https://rawgit.com/mrdoob/three.js/master/examples/js/libs/stats.min.js"></script>
+        <script src="https://rawgit.com/mrdoob/three.js/master/examples/js/loaders/FBXLoader.js"></script>
+        <script src="https://rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script>
+        <script src="https://rawgit.com/mrdoob/three.js/master/examples/js/libs/inflate.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js/examples/jsm/loaders/RGBELoader.js"></script> -->
+        <script src="scripts/video.js"></script>
+        <!-- <script type="module" src="/scripts/index2.js"></script> -->
+    </body>
+</html>
