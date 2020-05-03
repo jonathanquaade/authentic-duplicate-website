@@ -58,7 +58,7 @@ function homeContent() {
   document.body.appendChild(buttonsNode);
 
   const cssLink =
-    "https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles4.css";
+    "https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles5.css";
 
   addCss(cssLink);
   updateCSS();
@@ -105,13 +105,14 @@ function loadAUD() {
   console.log("currentUrl = " + currentUrl);
   if (currentUrl === recordUrl)  {
     console.log("currentUrl = recordUrl");
-      if (current === localUrl || currentUrl === homeUrl || currentUrl === home2Url || currentUrl === home3Url || currentUrl === home4Url || currentUrl === home5Url) {
+      if (currentUrl === localUrl || currentUrl === homeUrl || currentUrl === home2Url || currentUrl === home3Url || currentUrl === home4Url || currentUrl === home5Url) {
         console.log("previous page home");
+        recordUrl = currentUrl;
       } else {
         console.log("preivous page was home");
         removeAUD();
-        $('link[rel=stylesheet][href~="https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles4.css"]').remove();
-
+        $('link[rel=stylesheet][href~="https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles5.css"]').remove();
+        recordUrl = currentUrl;
       }
   }
   if (currentUrl !== recordUrl) {
@@ -123,7 +124,7 @@ function loadAUD() {
     } else {
       console.log("page is now not home");
       removeAUD();
-      $('link[rel=stylesheet][href~="https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles4.css"]').remove();
+      $('link[rel=stylesheet][href~="https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles5.css"]').remove();
       recordUrl = currentUrl;
     }
   }

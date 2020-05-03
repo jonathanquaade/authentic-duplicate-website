@@ -99,8 +99,11 @@ canvas { display: block; }
     cursor: pointer;
 }
 
-.aud-button:hover a {
+.aud-button:hover p {
     color: #454734;
+}
+.aud-button:hover a {
+  text-decoration: none;
 }
 
 
