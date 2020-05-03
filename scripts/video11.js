@@ -58,7 +58,7 @@ function homeContent() {
   document.body.appendChild(buttonsNode);
 
   const cssLink =
-    "https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles5.css";
+    "https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles6.css";
 
   addCss(cssLink);
   updateCSS();
@@ -98,7 +98,7 @@ function removeAUD() {
     a.remove();
   document.body.style.background = "none";
   document.body.style.overflow = "scroll";
-  $('link[rel=stylesheet][href~="https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles5.css"]').remove();
+  $('link[rel=stylesheet][href~="https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles6.css"]').remove();
   });
 }
 
