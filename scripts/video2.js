@@ -62,7 +62,7 @@ function homeContent () {
     buttonsNode.innerHTML = buttonsMarkup;
     document.body.appendChild(buttonsNode);
 
-    const cssLink = "https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles.css"
+    const cssLink = "https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles2.css"
    
     addCss(cssLink);
     updateCSS()
