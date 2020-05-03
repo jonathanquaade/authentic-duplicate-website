@@ -103,30 +103,53 @@ function loadAUD() {
   currentUrl = location.href;
   console.log("recordUrl = " + recordUrl);
   console.log("currentUrl = " + currentUrl);
-  if (recordUrl !== currentUrl) {
-    if (
-      currentUrl === homeUrl ||
-      currentUrl === home4Url ||
-      currentUrl === home2Url ||
-      currentUrl === home5Url ||
-      currentUrl === home3Url ||
-      currentUrl === localUrl
-    ) {
+  if (currentUrl === recordUrl)  {
+    console.log("currentUrl = recordUrl");
+      if (current === localUrl || currentUrl === homeUrl || currentUrl === home2Url || currentUrl === home3Url || currentUrl === home4Url || currentUrl === home5Url) {
+        console.log("previous page home");
+      } else {
+        console.log("preivous page was home");
+        removeAUD();
+      }
+  }
+  if (currentUrl !== recordUrl) {
+    console.log("currentUrl !== recordUrl");
+    if (currentUrl === localUrl || currentUrl === homeUrl || currentUrl === home2Url || currentUrl === home3Url || currentUrl === home4Url || currentUrl === home5Url) {
+      console.log("page is now home");
       homeContent();
       recordUrl = currentUrl;
-      console.log("page is home, video loaded & recordUrl = " + recordUrl);
-      return;
+    } else {
+      console.log("page is now not home");
+      removeAUD();
+      recordUrl = currentUrl;
     }
-    return;
-  } 
-  if (recordUrl === currentUrl) {
-    console.log("page is home");
-    return;
-  }
-  
-  else {
-    console.log("page is not home");
-    removeAUD();
-    return;
   }
 }
+  
+//   else {
+//     console.log("page is not home");
+//     removeAUD();
+//     recordUrl = currentUrl;
+//     return;
+//   }
+//   if (recordUrl !== currentUrl) {
+//     if (
+//       currentUrl === homeUrl ||
+//       currentUrl === home2Url ||
+//       currentUrl === home3Url ||
+//       currentUrl === home4Url ||
+//       currentUrl === home5Url ||
+//       currentUrl === localUrl
+//     ) {
+//       homeContent();
+//       recordUrl = currentUrl;
+//       console.log("page is home, video loaded & recordUrl = " + recordUrl);
+//       return;
+//     }
+//     else {
+//       removeAUD();
+//       recordUrl = currentUrl;
+//       return;
+//     }
+//   } 
+// }
