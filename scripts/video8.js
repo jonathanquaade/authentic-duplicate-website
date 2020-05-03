@@ -15,7 +15,7 @@ console.log(location.href);
 window.addEventListener("load", loadAUD);
 
 window.addEventListener("click", () => {
-  setTimeout(function () { loadAUD(); }, 1000);
+  setTimeout(function () { loadAUD(); }, 500);
 });
 
 window.addEventListener("resize", () => {
@@ -28,13 +28,13 @@ window.addEventListener("resize", () => {
 
 var buttonsMarkup = `<div class="aud-buttons">
         <div id="aud-one" class="aud-button">
-            <p>Consultancy</p>
+        <a href="http://authenticduplicate.com/consultancy"><p>Consultancy</p></a>
         </div>
         <div id="aud-two" class="aud-button">
-            <p>Journalism</p>
+            <a href="http://authenticduplicate.com/journalism"><p>Journalism</p></a>
         </div>
         <div id="aud-three" class="aud-button">
-            <p>Music</p>
+        <a href="http://authenticduplicate.com/music"> <p>Music</p></a>
         </div>
     </div> `;
 var videoMarkup = `
@@ -58,7 +58,7 @@ function homeContent() {
   document.body.appendChild(buttonsNode);
 
   const cssLink =
-    "https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles2.css";
+    "https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles4.css";
 
   addCss(cssLink);
   updateCSS();
@@ -110,6 +110,8 @@ function loadAUD() {
       } else {
         console.log("preivous page was home");
         removeAUD();
+        $('link[rel=stylesheet][href~="https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles4.css"]').remove();
+
       }
   }
   if (currentUrl !== recordUrl) {
@@ -121,6 +123,7 @@ function loadAUD() {
     } else {
       console.log("page is now not home");
       removeAUD();
+      $('link[rel=stylesheet][href~="https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles4.css"]').remove();
       recordUrl = currentUrl;
     }
   }

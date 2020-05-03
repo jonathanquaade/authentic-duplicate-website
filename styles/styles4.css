@@ -61,6 +61,9 @@ transform: translateX(calc(((100% - 100vw) / 2) * -1 ));
 
 canvas { display: block; }
 .dg.ac {z-index: 10; }
+.aud-buttons a {
+  text-decoration: none;
+  }
 .aud-buttons p {
     font-family: 'Berthold-Akzidenz-Light', serif;
     /* font-weight: 100; */
@@ -68,6 +71,7 @@ canvas { display: block; }
     font-size: 22px;
     letter-spacing: -0.025em;
     margin: 14px 0 11px 0;
+    text-decoration: none;
 }
 .aud-buttons {
     margin: 0 5%;
@@ -88,7 +92,6 @@ canvas { display: block; }
     text-align: center;
     transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
 }
-
 .aud-button:hover {
     border: 1px solid #E4D3C2;
     background: #E4D3C2;
@@ -96,9 +99,10 @@ canvas { display: block; }
     cursor: pointer;
 }
 
-.aud-button:hover p {
+.aud-button:hover a {
     color: #454734;
 }
+
 
 #aud-one, #aud-three { transform: translateY(-96px); }
 #aud-two { transform: translateY(96px); }
@@ -161,3 +165,4 @@ body.mobile-menu-open .overlay-nav-container {
   }
   
 }
+
