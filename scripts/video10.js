@@ -15,7 +15,7 @@ console.log(location.href);
 window.addEventListener("load", loadAUD);
 
 window.addEventListener("click", () => {
-  setTimeout(function () { loadAUD(); }, 500);
+  setTimeout(function () { loadAUD(); }, 1000);
 });
 
 window.addEventListener("resize", () => {
