@@ -1,6 +1,10 @@
+const localUrl ="http://127.0.0.1:5500";
 const homeUrl ="https://charisse-chikwiri.squarespace.com/";
 const home2Url ="https://charisse-chikwiri.squarespace.com/home";
-const localUrl ="http://127.0.0.1:5500";
+const home3Url ="http://authenticduplicate.com/";
+const home4Url ="https://authenticduplicate.com/";
+const home5Url ="https://authenticduplicate.com/";
+
 
 const currentUrl = location.href;
 
@@ -10,7 +14,9 @@ let h = screen.height;
 console.log(currentUrl)
 window.addEventListener('load', (event) => {
 //   console.log('page is fully loaded' + location.href);
-  	if (currentUrl === homeUrl || currentUrl === home2Url  || currentUrl === localUrl){ 
+      if (currentUrl === homeUrl || currentUrl === home4Url || 
+          currentUrl === home2Url || currentUrl === home5Url ||
+          currentUrl === home3Url || currentUrl === localUrl ){ 
      console.log('page is home');
      homeContent()
      return

@@ -140,3 +140,24 @@ body.mobile-menu-open .overlay-nav-container {
   color: var(--secondary-color);
   font-weight: normal;
 }
+
+
+@media only screen and (max-width: 769px) {
+  .aud-buttons {
+    flex-direction: column!important;
+    justify-content: space-evenly!important;
+  }
+  
+  #aud-one, #aud-two, #aud-three {
+    transform: translateY(0px)!important;
+  }
+  
+  #aud-one, #aud-three {
+    transform: translateX(45%)!important;
+  }
+
+   #aud-two {
+    transform: translateX(-45%)!important;
+  }
+  
+}
