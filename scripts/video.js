@@ -16,14 +16,17 @@ window.addEventListener('load', (event) => {
      return
     }
     else { 
- 	console.log('page is not home');
-   }   return
+     console.log('page is not home');
+     return
+   }  
 });
 
 window.addEventListener('resize', (event) => {
     w = screen.width;
     h = screen.height;
+    if (currentUrl === homeUrl || currentUrl === localUrl){ 
     updateCSS() 
+    }
      
 });
 
