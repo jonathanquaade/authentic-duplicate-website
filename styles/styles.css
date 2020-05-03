@@ -1,0 +1,55 @@
+@font-face {   
+    font-family: 'Berthold-Akzidenz-Grotesk'; 
+    src: url(https://static1.squarespace.com/static/552016d6e4b095194345dc41/t/5ea88cfd65052a4235c59534/1588104445413/Berthold-Akzidenz-Grotesk-Light.otf), url(https://static1.squarespace.com/static/552016d6e4b095194345dc41/t/5ea88d010d76a35abbfb6a5e/1588104449708/Berthold-Akzidenz-Grotesk-Light.woff), url(https://static1.squarespace.com/static/552016d6e4b095194345dc41/t/5ea88d0584a4631b4a1ad14a/1588104453877/Berthold-Akzidenz-Grotesk-Light.woff2); 
+    }
+
+canvas { display: block; }
+.dg.ac {z-index: 10; }
+.aud-buttons p {
+    font-family: 'Berthold-Akzidenz-Grotesk', serif;
+    /* font-weight: 100; */
+    color: #E4D3C2;
+    font-size: 22px;
+    letter-spacing: -0.025em;
+    margin: 12px 0 11px 0;
+}
+.aud-buttons {
+    margin: 0 48px;
+    width: calc(100% - 96px);
+    height: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.aud-button {
+    border: 1px solid #E4D3C2;
+    border-radius: 30px;
+    width: 200px;
+    text-align: center;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.aud-button:hover {
+    border: 1px solid #E4D3C2;
+    background: #E4D3C2;
+    text-align: center;
+    cursor: pointer;
+}
+
+.aud-button:hover p {
+    color: #454734;
+}
+
+#aud-one, #aud-three { transform: translateY(-96px); }
+#aud-two { transform: translateY(96px); }
+
+#video-box video {
+position: fixed;
+min-width: 104%;
+min-height: 104%;
+transform: translateX(calc(((100% - 100vw) / 2) * -1 ));
+}

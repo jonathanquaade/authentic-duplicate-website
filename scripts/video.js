@@ -1,6 +1,6 @@
 const homeUrl ="https://charisse-chikwiri.squarespace.com";
 const home2Url ="https://charisse-chikwiri.squarespace.com/home";
-const localUrl ="http://127.0.0.1:5500/";
+const localUrl ="http://127.0.0.1:5500";
 
 const currentUrl = location.href;
 
@@ -10,7 +10,7 @@ let h = screen.height;
 console.log(currentUrl)
 window.addEventListener('load', (event) => {
 //   console.log('page is fully loaded' + location.href);
-  	if (currentUrl === homeUrl || currentUrl === localUrl){ 
+  	if (currentUrl === homeUrl || currentUrl === home2Url  || currentUrl === localUrl){ 
      console.log('page is home');
      homeContent()
      return
@@ -66,6 +66,11 @@ function homeContent () {
 }
 
 function updateCSS() {
+
+    document.body.style.overflow = "hidden";
+    document.body.style.margin = "0px";
+    document.body.style.background = "#454734";
+
     document.getElementById("video-box").style.height = h + 'px';
     document.getElementById("video-box").style.minHeight =  h + 'px';
     document.getElementById("video-box").style.width = w + 'px';
