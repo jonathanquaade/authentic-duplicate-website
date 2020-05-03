@@ -3,11 +3,12 @@
     src: url(https://static1.squarespace.com/static/552016d6e4b095194345dc41/t/5ea88cfd65052a4235c59534/1588104445413/Berthold-Akzidenz-Grotesk-Light.otf), url(https://static1.squarespace.com/static/552016d6e4b095194345dc41/t/5ea88d010d76a35abbfb6a5e/1588104449708/Berthold-Akzidenz-Grotesk-Light.woff), url(https://static1.squarespace.com/static/552016d6e4b095194345dc41/t/5ea88d0584a4631b4a1ad14a/1588104453877/Berthold-Akzidenz-Grotesk-Light.woff2); 
     }
 
-canvas { display: block; }
+/* LOCAL STYLES */
+
+/* canvas { display: block; }
 .dg.ac {z-index: 10; }
 .aud-buttons p {
     font-family: 'Berthold-Akzidenz-Grotesk', serif;
-    /* font-weight: 100; */
     color: #E4D3C2;
     font-size: 22px;
     letter-spacing: -0.025em;
@@ -52,4 +53,90 @@ position: fixed;
 min-width: 104%;
 min-height: 104%;
 transform: translateX(calc(((100% - 100vw) / 2) * -1 ));
+} */
+
+
+
+/* //ON SITE OVERRIES STYLES */
+
+canvas { display: block; }
+.dg.ac {z-index: 10; }
+.aud-buttons p {
+    font-family: 'Berthold-Akzidenz-Light', serif;
+    /* font-weight: 100; */
+    color: #E4D3C2;
+    font-size: 22px;
+    letter-spacing: -0.025em;
+    margin: 14px 0 11px 0;
+}
+.aud-buttons {
+    margin: 0 5%;
+    width: calc(100% - 10%);
+    height: 100%;
+    z-index: 99;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.aud-button {
+    border: 1px solid #E4D3C2;
+    border-radius: 30px;
+    width: 200px;
+    text-align: center;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+.aud-button:hover {
+    border: 1px solid #E4D3C2;
+    background: #E4D3C2;
+    text-align: center;
+    cursor: pointer;
+}
+
+.aud-button:hover p {
+    color: #454734;
+}
+
+#aud-one, #aud-three { transform: translateY(-96px); }
+#aud-two { transform: translateY(96px); }
+
+#video-box {
+  background: var(--main-color);
+  pointer-events: none;
+  z-index: 1!important;
+  position: fixed;
+  top: 0px;
+}
+
+#video-box video {
+min-height: 104%;
+transform: translateX(calc(((100% - 100vw) / 2) * -1 ));
+}
+
+[data-nc-container="left"], [data-nc-container="center"] {
+z-index: 100;
+}
+
+.site-outer-padding-small .site-header [data-nc-container="left"] a {
+  color: #E4D3C2;
+}
+
+.site-outer-padding-small .site-header {
+  background: var(--main-color); 
+}
+
+.mobile-nav-toggle-label .Icon--hamburger, 
+body.mobile-menu-open .mobile-bar-wrapper .mobile-nav-toggle-label .Icon--close {
+    stroke: var(--secondary-color);
+  }
+body.mobile-menu-open .overlay-nav-container {
+  background: rgba(0,0,0,0.8);
+}
+
+.overlay-nav-wrapper a{
+  color: var(--secondary-color);
+  font-weight: normal;
 }
