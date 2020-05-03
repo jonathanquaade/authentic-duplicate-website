@@ -1,4 +1,4 @@
-const homeUrl ="https://charisse-chikwiri.squarespace.com";
+const homeUrl ="https://charisse-chikwiri.squarespace.com/";
 const home2Url ="https://charisse-chikwiri.squarespace.com/home";
 const localUrl ="http://127.0.0.1:5500";
 
