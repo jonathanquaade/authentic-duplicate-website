@@ -51,7 +51,7 @@ var videoMarkup = `
     Your browser does not support HTML video.
    </video>
   </div>
-    `;
+`;
 
 function homeContent () {
     const videoNode = document.createElement("div");                
@@ -62,7 +62,10 @@ function homeContent () {
     buttonsNode.innerHTML = buttonsMarkup;
     document.body.appendChild(buttonsNode);
 
-   updateCSS()
+    const cssLink = "https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles.css"
+   
+    addCss(cssLink);
+    updateCSS()
 }
 
 function updateCSS() {
@@ -84,6 +87,19 @@ function updateCSS() {
     document.getElementById("video-content").style.left = '0%';
 
 }
+
+function addCss(fileName) {
+
+    var head = document.head;
+    var link = document.createElement("link");
+  
+    link.type = "text/css";
+    link.rel = "stylesheet";
+    link.href = fileName;
+  
+    head.appendChild(link);
+  }
+  
 
 
 
