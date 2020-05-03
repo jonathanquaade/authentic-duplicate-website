@@ -6,13 +6,14 @@ const home4Url ="https://authenticduplicate.com/";
 const home5Url ="https://authenticduplicate.com/";
 
 
-const currentUrl = location.href;
+let currentUrl;
 
 let w = screen.width;
 let h = screen.height;
 
 console.log(currentUrl)
-window.addEventListener('load', (event) => {
+window.addEventListener('load', () => {
+     currentUrl = location.href;
 //   console.log('page is fully loaded' + location.href);
       if (currentUrl === homeUrl || currentUrl === home4Url || 
           currentUrl === home2Url || currentUrl === home5Url ||
@@ -27,7 +28,23 @@ window.addEventListener('load', (event) => {
    }  
 });
 
-window.addEventListener('resize', (event) => {
+window.addEventListener('click', () => {
+    currentUrl = location.href;
+//   console.log('page is fully loaded' + location.href);
+     if (currentUrl === homeUrl || currentUrl === home4Url || 
+         currentUrl === home2Url || currentUrl === home5Url ||
+         currentUrl === home3Url || currentUrl === localUrl ){ 
+    console.log('page is home');
+    homeContent()
+    return
+   }
+   else { 
+    console.log('page is not home');
+    return
+  }  
+});
+
+window.addEventListener('resize', () => {
     w = screen.width;
     h = screen.height;
     if (currentUrl === homeUrl || currentUrl === localUrl){ 
