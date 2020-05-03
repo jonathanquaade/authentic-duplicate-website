@@ -39,7 +39,7 @@ var buttonsMarkup = `<div class="aud-buttons">
     </div> `;
 var videoMarkup = `
   <div id="video-box">
-   <video id="video-content" autoplay loop mute>
+   <video id="video-content" autoplay loop muted playsinline>
     <source src="https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1280_10MG.mp4" type="video/mp4">
     Your browser does not support HTML video.
    </video>
@@ -58,7 +58,7 @@ function homeContent() {
   document.body.appendChild(buttonsNode);
 
   const cssLink =
-    "https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles6.css";
+    "https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles7.css";
 
   addCss(cssLink);
   updateCSS();
@@ -98,7 +98,7 @@ function removeAUD() {
     a.remove();
   document.body.style.background = "none";
   document.body.style.overflow = "scroll";
-  $('link[rel=stylesheet][href~="https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles6.css"]').remove();
+  $('link[rel=stylesheet][href~="https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles7.css"]').remove();
   });
 }
 

@@ -169,3 +169,12 @@ body.mobile-menu-open .overlay-nav-container {
   
 }
 
+@media only screen and (max-width: 375) {
+#aud-one, #aud-three {
+    transform: translateX(30%)!important;
+}
+#aud-two {
+  transform: translateX(-30%)!important;
+}
+}
+
