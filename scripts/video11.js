@@ -96,6 +96,9 @@ function addCss(fileName) {
 function removeAUD() {
   document.querySelectorAll(".aud-homepage").forEach(function (a) {
     a.remove();
+  document.body.style.background = "none";
+  document.body.style.overflow = "scroll";
+  $('link[rel=stylesheet][href~="https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles5.css"]').remove();
   });
 }
 
@@ -111,7 +114,6 @@ function loadAUD() {
       } else {
         console.log("preivous page was home");
         removeAUD();
-        $('link[rel=stylesheet][href~="https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles5.css"]').remove();
         recordUrl = currentUrl;
       }
   }
@@ -124,7 +126,6 @@ function loadAUD() {
     } else {
       console.log("page is now not home");
       removeAUD();
-      $('link[rel=stylesheet][href~="https://cdn.jsdelivr.net/gh/notflat3/authentic-duplicate-website/styles/styles5.css"]').remove();
       recordUrl = currentUrl;
     }
   }
