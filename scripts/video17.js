@@ -70,7 +70,7 @@ function updateCSS() {
   document.body.style.background = "#000";
 
   document.getElementById("video-box").style.height = h + "px";
-  document.getElementById("video-box").style.minHeight = h + "px";
+  document.getElementById("video-box").style.minHeight = '100%';
   document.getElementById("video-box").style.width = w + "px";
   document.getElementById("video-box").style.pointerEvents = "none";
   document.getElementById("video-box").style.zIndex = "-1";
